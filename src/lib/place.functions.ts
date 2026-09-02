@@ -189,7 +189,7 @@ export const getPlace = createServerFn({ method: "GET" }).handler(
           authorUri: r.authorAttribution?.uri,
           when: r.relativePublishTimeDescription ?? "",
         })),
-      photos: resolved.filter((p): p is PlacePhoto => p !== null),
+      photos: resolved.filter((p) => p !== null) as PlacePhoto[],
       amenities,
       fetchedAt: Date.now(),
     };
