@@ -36,15 +36,15 @@ export type PlaceReview = {
   text: string;
   rating: number;
   author: string;
-  authorPhoto?: string;
-  authorUri?: string;
+  authorPhoto?: string | undefined;
+  authorUri?: string | undefined;
   when: string;
 };
 
 export type PlacePhoto = {
   url: string;
-  attribution?: string;
-  attributionUri?: string;
+  attribution?: string | undefined;
+  attributionUri?: string | undefined;
   width: number;
   height: number;
 };
@@ -52,14 +52,14 @@ export type PlacePhoto = {
 export type PlaceData = {
   name: string;
   address: string;
-  shortAddress?: string;
+  shortAddress?: string | undefined;
   lat: number;
   lng: number;
-  rating?: number;
-  reviewCount?: number;
-  phone?: string;
+  rating?: number | undefined;
+  reviewCount?: number | undefined;
+  phone?: string | undefined;
   mapsUri: string;
-  openNow?: boolean;
+  openNow?: boolean | undefined;
   weekdayHours: string[];
   reviews: PlaceReview[];
   photos: PlacePhoto[];
