@@ -329,10 +329,10 @@ function Index() {
             <article className="rounded-2xl border border-border bg-card p-8 shadow-sm md:p-12" aria-live="polite">
               <Quote className="h-8 w-8 text-primary/50" aria-hidden />
               <blockquote className="mt-4 font-heading text-2xl font-medium leading-snug md:text-3xl">
-                “{testimonials[slide].quote}”
+                “{testimonials[slide]!.quote}”
               </blockquote>
               <footer className="mt-6 text-sm font-semibold text-muted-foreground">
-                — {testimonials[slide].author}
+                — {testimonials[slide]!.author}
               </footer>
             </article>
             <div className="mt-6 flex items-center justify-center gap-3">
